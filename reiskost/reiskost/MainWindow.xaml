@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:reiskost"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="650" Width="800"
+        Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,2">
+        <Label Content="Bestemming: " HorizontalAlignment="Left" Margin="103,43,0,0" VerticalAlignment="Top"/>
+        <Label Content="Basisvlucht:" HorizontalAlignment="Left" Margin="118,92,0,0" VerticalAlignment="Top"/>
+        <Label Content="Vluchtklasse (1, 2 of 3)" HorizontalAlignment="Left" Margin="41,146,0,0" VerticalAlignment="Top"/>
+        <Label Content="Basisprijs per dag:" HorizontalAlignment="Left" Margin="67,200,0,0" VerticalAlignment="Top"/>
+        <Label Content="Aantal dagen: " HorizontalAlignment="Left" Margin="97,247,0,0" VerticalAlignment="Top"/>
+        <Label Content="Aantal personen: " HorizontalAlignment="Left" Margin="75,297,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,2.325"/>
+        <Label Content="Kortingspercentage" HorizontalAlignment="Left" Margin="61,348,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,2.325"/>
+        
+        <TextBox Name="destinationTextBox" HorizontalAlignment="Left" Margin="250,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="basicFlightTextBox" HorizontalAlignment="Left" Margin="250,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="flightClassTextBox" HorizontalAlignment="Left" Margin="250,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="basicPricePerDayTextBox" HorizontalAlignment="Left" Margin="250,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="numberOfDaysTextBox" HorizontalAlignment="Left" Margin="250,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="numberOfPersonsTextBox" HorizontalAlignment="Left" Margin="250,301,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="discountPercentageTextBox" HorizontalAlignment="Left" Margin="250,356,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="resultTextBox" HorizontalAlignment="Left" Background="LightGray" Height="182" Margin="75,403,0,0" TextWrapping="Wrap" Text="REISKOST VOLGENS BESTEMMING: " VerticalAlignment="Top" Width="382"/>
+        
+        <Button Click="calculateButton_Click"  Name="calculateButton" Padding="10" Content="Berekenen" HorizontalAlignment="Left" Margin="529,108,0,0" VerticalAlignment="Top" Width="212"/>
+        <Button Click="clearButton_Click"  Name="clearButton" Padding="10" Content="Wissen" HorizontalAlignment="Left" Margin="529,206,0,0" VerticalAlignment="Top" Width="212"/>
+        <Button Click="closeButton_Click"  Name="closeButton" Padding="10" Content="Afsluiten" HorizontalAlignment="Left" Margin="529,301,0,0" VerticalAlignment="Top" Width="212"/>
 
     </Grid>
 </Window>
